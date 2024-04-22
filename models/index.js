@@ -11,7 +11,7 @@ Product.belongsTo(Category, {
 
 // Categories have many Products
 Category.hasMany(Product, {
-  foreign_Key: 'category_id',
+  foreignKey: 'category_id',
   onDelete: 'CASCADE'
 });
 
@@ -20,7 +20,7 @@ Product.belongsToMany(Tag, {
   // Defines a third table needed to store the foreign keys
   through: {
     model: ProductTag,
-    foreign_Key: 'tag_id',
+    foreignKey: 'tag_id',
     onDelete: 'CASCADE'
   },
 })
@@ -30,7 +30,7 @@ Tag.belongsToMany(Product, {
   // Defines a third table needed to store the foreign keys
   through: {
     model: ProductTag,
-    foreign_Key: 'product_id',
+    foreignKey: 'product_id',
     onDelete: 'CASCADE'
   },
 })
