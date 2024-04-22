@@ -30,9 +30,9 @@ Tag.belongsToMany(Product, {
   // Defines a third table needed to store the foreign keys
   through: {
     model: ProductTag,
-    // unique: false
+    foreign_Key: 'product_id',
+    onDelete: 'CASCADE'
   },
-  as: 'tag_id'
 })
 
 module.exports = {
