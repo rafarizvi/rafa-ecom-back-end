@@ -20,8 +20,8 @@ Product.belongsToMany(Tag, {
   // Defines a third table needed to store the foreign keys
   through: {
     model: ProductTag,
-    foreignKey: 'tag_id',
     onDelete: 'CASCADE'
+    // foreignKey: 'tag_id',
   },
 })
 
@@ -30,7 +30,6 @@ Tag.belongsToMany(Product, {
   // Defines a third table needed to store the foreign keys
   through: {
     model: ProductTag,
-    foreignKey: 'product_id',
     onDelete: 'CASCADE'
   },
 })
