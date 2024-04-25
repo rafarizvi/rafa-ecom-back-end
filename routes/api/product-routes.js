@@ -16,7 +16,9 @@ router.get('/', async (req, res) => {
         },
         {
           model: Tag,
-          // attributes: ['id','tag_name'],
+          through: { // Exclude the through model (ProductTag)
+            attributes: [] // Exclude any attributes from the join table
+          }
         }
       ],
     })
@@ -39,7 +41,9 @@ router.get('/:id', async (req, res) => {
         },
         {
           model: Tag,
-          // attributes: ['id','tag_name'],
+          through: { // Exclude the through model (ProductTag)
+            attributes: [] // Exclude any attributes from the join table
+          }
         }
       ],
     })

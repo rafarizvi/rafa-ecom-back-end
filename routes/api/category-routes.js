@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
       // for each category data find its corresponding products.
       include: {
         model: Product,
-        attributes: ['id', 'product_name', 'category_id'],
+        attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
       },
     });
     
